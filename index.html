@@ -1,3 +1,81 @@
 // ok
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free vbuck</title>
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de notifications</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/72/02/c2/7202c215f635348a8412d38300304d53.jpg');
+            background-size: cover; /* Assure que l'image de fond couvre toute la fenêtre du navigateur */
+            background-position: top; /* Centre l'image de fond */
+            background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+            border:500px;
+        }
+        #notification-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        
+        }
+        .Attention{
+        color :red 
 
-https://go.codetogether.com/#/f341a402-9c40-4229-930e-07dbc0f0e781/Mhp0W31McxrWSat1BHiCp8
+        }
+    </style>
+</head>
+<body>
+    <button onclick="afficherPopup()">Cliquer ici pour lancer la génération des vbuck</button>
+
+    <div id="notification-popup">
+        <p>Acceptez-vous de recevoir des notifications pour de nouvelle promos?</p>
+        <button onclick="demanderAutorisation()">Oui</button>
+        <button onclick=>Non</button>
+    </div>
+
+    <script>
+        function afficherPopup() {
+            var popup = document.getElementById('notification-popup');
+            popup.style.display = 'block';
+        }
+
+        function demanderAutorisation() {
+            Notification.requestPermission().then(function(permission) {
+                if (permission === 'granted') {
+                    alert('Autorisation accordée! Vous pouvez maintenant recevoir des notifications.');
+                } else {
+                    alert('Autorisation refusée. Vous ne recevrez pas de notifications.');
+                }
+                fermerPopup();
+            });
+        }
+
+        function fermerPopup() {
+            var popup = document.getElementById('notification-popup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
+
+<body>
+    <div id="Attention">
+    
+    <h1>Attention!</h1>
+    <p>Les V-Bucks  sont bien réels!</p>
+</div>
+</body>
+</html>
