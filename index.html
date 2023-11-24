@@ -44,28 +44,7 @@
         <button onclick=>rêve pas</button>
     </div>
 
-    <script>
-        function afficherPopup() {
-            var popup = document.getElementById('notification-popup');
-            popup.style.display = 'block';
-        }
-
-        function demanderAutorisation() {
-            Notification.requestPermission().then(function(permission) {
-                if (permission === 'granted') {
-                    alert('Autorisation accordée! Vous pouvez maintenant recevoir des notifications.');
-                } else {
-                    alert('Autorisation refusée. Vous ne recevrez pas de notifications.');
-                }
-                fermerPopup();
-            });
-        }
-
-        function fermerPopup() {
-            var popup = document.getElementById('notification-popup');
-            popup.style.display = 'none';
-        }
-    </script>
+   
 </body>
 </html>
 
