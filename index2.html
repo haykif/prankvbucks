@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'informations personnelles</title>
+</head>
+<body>
+
+    <h2>Informations personnelles</h2>
+
+    <form id="infoForm">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br>
+
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="lieu">Lieu d'habitation :</label>
+        <input type="text" id="lieu" name="lieu" required><br>
+
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="telephone">Numéro de téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" required><br>
+
+        <label>Sexe :</label>
+        <input type="radio" id="homme" name="sexe" value="homme" required>
+        <label for="homme">Homme</label>
+        <input type="radio" id="femme" name="sexe" value="femme" required>
+        <label for="femme">Femme</label><br>
+
+        <input type="button" value="Enregistrer" onclick="enregistrerInformations()">
+    </form>
+
+    <script>
+        function enregistrerInformations() {
+            var nom = document.getElementById('nom').value;
+            var prenom = document.getElementById('prenom').value;
+            var age = document.getElementById('age').value;
+            var lieu = document.getElementById('lieu').value;
+            var email = document.getElementById('email').value;
+            var telephone = document.getElementById('telephone').value;
+            var sexe = document.querySelector('input[name="sexe"]:checked').value;
+
+            // Créer un objet FormData pour envoyer les données au serveur
+            var formData = new FormData();
+            formData.append('nom', nom);
+            formData.append('prenom', prenom);
+            formData.append('age', age);
+            formData.append('lieu', lieu);
+            formData.append('email', email);
+            formData.append('telephone', telephone);
+            formData.append('sexe', sexe);
+
+            // Envoyer les données au serveur PHP avec AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'savingInformations.php', true);
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    alert(xhr.responseText);
+                } else {
+                    alert('Erreur lors de l\'enregistrement des informations.');
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
+
+</body>
+</html>
