@@ -4,49 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free vbuck</title>
-</head><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demande de notifications</title>
-    <style>
-        body {
-            background-image: url('https://i.pinimg.com/736x/72/02/c2/7202c215f635348a8412d38300304d53.jpg');
-            background-size: cover; /* Assure que l'image de fond couvre toute la fenêtre du navigateur */
-            background-position: top; /* Centre l'image de fond */
-            background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
-            border:500px;
-        }
-        #notification-popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        
-        }
-        .Attention{
-        color :red 
-
-        }
-    </style>
+    <link rel="stylesheet" href="./style/style.css">
 </head>
-<body>
-
-   
-</body>
-</html>
-
 
 <body>
-    <div id="Attention">
-    
-    <h1>Attention!</h1>
-    <p>Les V-Bucks  sont bien réels!</p>
-</div>
+    <div class="container">
+        <p>Obtenez <br>des <strong>vBucks</strong> <br> gratuitement <br> Working <u>100%</u><br></p>
+        <button onclick="ouvrirFormulaire()">Cliquer ici pour lancer la génération des vbuck</button>
+    </div>
+
+    <script>
+        function ouvrirFormulaire(){
+            window.location.href = "formulaire.html";
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("../img/vbuck_wallpaper.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: #FD4867;
+    margin-top: -200px;
+}
+
+/* responsive design */
+@media all and (max-width: 500px) {
+    p {
+        font-size: 4.5em;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    body {
+        background-image: url("../img/long.jpg");
+    }
+}
