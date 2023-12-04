@@ -21,6 +21,20 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 20px;
+    background-color: #FF009B;
+    color: #1400FF;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: #1400FF;
+    color: #FF009B;
+    transition: 0.5s;
+    scale: 1.05;
 }
 
 p {
